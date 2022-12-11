@@ -1,0 +1,27 @@
+services:
+  recipe-db:
+    container_name: 'recipe-db'
+    image: postgres:14.2-alpine
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=recipe
+      - POSTGRES_USER=recipedb
+      - POSTGRES_PASSWORD=admin
+    volumes:
+      - ./postgres:/docker-entrypoint-initdb.d/
+  recipe-service:
+    container_name: 'recipe-service'
+    image: recipe:latest
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080/tcp"
+    environment:
+      - SPRING_PROFILES=local
+      - DB_HOST=recipe-db:5432/recipe
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080

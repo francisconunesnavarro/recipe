@@ -1,0 +1,12 @@
+spring:
+  config:
+    activate:
+      on-profile: test
+  datasource:
+    url: jdbc:tc:postgresql:14.2:///recipedb
+    username: ${DB_CSO_USER:postgres}
+    password: ${DB_CSO_PASS:postgres}
+  jpa:
+    generate-ddl: false
+  liquibase:
+    contexts: test

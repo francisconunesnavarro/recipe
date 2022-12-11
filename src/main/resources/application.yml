@@ -1,0 +1,52 @@
+spring:
+  jackson:
+    deserialization:
+      FAIL_ON_NULL_FOR_PRIMITIVES: true
+  application:
+    name: recipe
+  profiles:
+    active: "@activeProfile@"
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost:5432/recipe}
+    username: ${DB_USER:recipedb}
+    password: ${DB_PASS:admin}
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    show-sql: false
+  liquibase:
+    change-log: classpath:db/changelog-master.yml
+    contexts: local
+
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    url: /recipe-contract-specification.yaml
+
+server:
+  port: 8080
+  compression:
+    enabled: true
+    mime-types: application/json
+    min-response-size: 1024
+  servlet:
+    context-path: /api
+
+logging:
+  level:
+    com:
+      abn:
+        recipe: info
+    web: info

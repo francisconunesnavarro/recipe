@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - property:
+      dbms: postgresql
+      name: generate_uuid
+      value: uuid_generate_v4()
+  - changeSet:
+      id: uuid-postgres
+      author: francisco
+      changes:
+        - sql:
+            dbms: 'postgresql'
+            endDelimiter: ';'
+            sql: 'CREATE EXTENSION IF NOT EXISTS "uuid-ossp";'
+  - include:
+      file: db/changelog/changelog.yml
+  - include:
+      file: db/changelog/data/changelog-data-test.yml
+

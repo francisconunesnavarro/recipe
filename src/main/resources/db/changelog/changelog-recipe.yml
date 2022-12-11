@@ -1,0 +1,60 @@
+databaseChangeLog:
+  - changeSet:
+      id: recipe-table
+      author: francisco
+      changes:
+        - createTable:
+            tableName: recipe
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+              - column:
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  name: created_date
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_date
+                  type: timestamp
+              - column:
+                  defaultValueNumeric: "0"
+                  name: version
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar
+                  constraints:
+                    nullable: false
+              - column:
+                  defaultValueBoolean: true
+                  name: is_active
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: meal_type
+                  type: varchar
+                  constraints:
+                    nullable: false
+              - column:
+                  name: number_of_servings
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: prep_time
+                  type: varchar(255)
+              - column:
+                  name: cook_time
+                  type: varchar(255)
+              - column:
+                  name: instructions
+                  type: varchar
+                  constraints:
+                    nullable: false

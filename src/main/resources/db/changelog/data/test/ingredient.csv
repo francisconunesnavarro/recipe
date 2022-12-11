@@ -1,0 +1,72 @@
+id,created_date,updated_date,version,name,is_active,quantity,unit_measurement,recipe_id
+982ce0ff-d1f3-41eb-b751-5483018310c9,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,pancetta,true,100,g,0823e72d-2934-4968-991e-f98dc1e073dc
+6f8e6acf-e375-4621-9ae6-2d662c283113,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,pecorino cheese,true,50,g,0823e72d-2934-4968-991e-f98dc1e073dc
+e252bb70-a8b0-4021-af63-2835d1c86a13,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,parmesan,true,50,g,0823e72d-2934-4968-991e-f98dc1e073dc
+eaa79764-c886-4133-971e-eb2d385d4991,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,egg,true,3,unit,0823e72d-2934-4968-991e-f98dc1e073dc
+38258439-976a-4a57-8f45-eb5c6bb95228,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,spaghetti,true,350,g,0823e72d-2934-4968-991e-f98dc1e073dc
+faeace29-59f8-42b7-bf7b-9e522dcc9827,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,garlic,true,2,unit,0823e72d-2934-4968-991e-f98dc1e073dc
+7221cf25-934a-407b-b44c-19075fd15fba,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,unsalted butter,true,50,g,0823e72d-2934-4968-991e-f98dc1e073dc
+93644526-be68-4e05-8287-2ea87aa5dcbe,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,sea salt,true,1,soup spoon,0823e72d-2934-4968-991e-f98dc1e073dc
+fd79db3f-db4f-4dac-8f78-11a6078d87e7,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,black pepper,true,1,unit,0823e72d-2934-4968-991e-f98dc1e073dc
+b56dabbf-4241-4f21-8293-77236ee75ec1,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,cup flour,true,125,g,1357256c-aa4e-47f5-98be-6fd4d620465e
+b89d6015-bc31-45c8-a24b-1b8384bc58ae,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,tablespoons organic sugar,true,2,unit,1357256c-aa4e-47f5-98be-6fd4d620465e
+baafbb08-1800-4dff-9eca-46f23846a585,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,tablespoon baking powder,true,1,unit,1357256c-aa4e-47f5-98be-6fd4d620465e
+38d75683-00df-4f57-8a30-b437d67cc4c4,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,teaspoon salt,true,0.5,unit,1357256c-aa4e-47f5-98be-6fd4d620465e
+aa41bb29-6401-4486-9a99-adfe6932d05a,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,cup non-dairy milk,true,250,ml,1357256c-aa4e-47f5-98be-6fd4d620465e
+c7863a73-b96d-4944-979e-715cb7cd8822,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,tablespoon apple cider vinegar,true,1,unit,1357256c-aa4e-47f5-98be-6fd4d620465e
+1240c551-a22b-43e3-83fa-ea2851a6460b,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,teaspoon vanilla maple syrup to serve,true,1,unit,1357256c-aa4e-47f5-98be-6fd4d620465e
+13ab6467-9d05-443d-ac5c-e07b271b48fc,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"pound cod, tilapia, halibut, or other white fish filets",true,1,unit,529f02f7-2552-4e8c-a719-aabe41add097
+31317cbd-4b8b-4598-aed2-245d08f3f48b,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"teaspoons chili powder, enough to coat the fish",true,3,unit,529f02f7-2552-4e8c-a719-aabe41add097
+302b0765-8658-45f5-b8b9-98221150b303,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,teaspoon kosher salt,true,1,unit,529f02f7-2552-4e8c-a719-aabe41add097
+f6e8677c-6a1e-494a-bbd3-0f88ee1719de,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,cup sour cream,true,0.5,unit,529f02f7-2552-4e8c-a719-aabe41add097
+1e78d226-38a0-494d-89d9-01fcdbdad9e5,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,cup mayonnaise,true,0.25,unit,529f02f7-2552-4e8c-a719-aabe41add097
+017c879c-075c-4778-90f7-fda1b1d007f5,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,tablespoons lime juice (from 2 limes),true,4,unit,529f02f7-2552-4e8c-a719-aabe41add097
+9e0bbfcc-c02f-4e7b-b118-b3db3bed28eb,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"teaspoon hot sauce, optional",true,1,unit,529f02f7-2552-4e8c-a719-aabe41add097
+8b3c362a-1d7e-43b9-ab4e-4dbc7c0fdaf1,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"small head red cabbage, shredded (about 4 cups)",true,0.5,unit,529f02f7-2552-4e8c-a719-aabe41add097
+d335cc0e-6903-48da-8cba-1032e0e429ef,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,taco-sized corn or flour tortillas,true,12,unit,529f02f7-2552-4e8c-a719-aabe41add097
+350d38cb-b409-40ad-8dbe-d274af1609f8,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"avocado, sliced",true,1,unit,529f02f7-2552-4e8c-a719-aabe41add097
+6025a9ea-7a92-4a0c-849e-bc53293db952,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"radishes, thinly sliced",true,4,unit,529f02f7-2552-4e8c-a719-aabe41add097
+23aab364-d653-4ac0-9e14-26223d252f1e,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"spring onions, thinly sliced",true,4,unit,529f02f7-2552-4e8c-a719-aabe41add097
+7be86837-0261-4551-aefc-ffde0b71258c,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,cup roughly chopped cilantro,true,0.33,unit,529f02f7-2552-4e8c-a719-aabe41add097
+d0aae184-992e-4dfe-b3cf-1f5ecc7eb65f,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"red peppers, cut into large chunks",true,3,unit,058b437a-5271-424b-9ce6-4f0d86dc8a19
+8da1c283-7b31-4015-93cf-729c1e1a0eb5,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"aubergines, cut into ½ cm thick slices",true,2,unit,058b437a-5271-424b-9ce6-4f0d86dc8a19
+af64971f-cfd8-424b-9916-7118dcc37e73,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"tbsp olive oil, plus extra for the dish",true,8,unit,058b437a-5271-424b-9ce6-4f0d86dc8a19
+5cafbb86-e89b-422b-9606-c6cf414f5967,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,lasagne sheets,true,300,g,058b437a-5271-424b-9ce6-4f0d86dc8a19
+eafb8a35-9f1d-46bb-9e8c-38b3d0c0adb5,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,mozzarella,true,125,g,058b437a-5271-424b-9ce6-4f0d86dc8a19
+8766257c-c643-4992-b034-7c3a9928e709,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"cherry tomatoes, halved",true,0.5,kg,058b437a-5271-424b-9ce6-4f0d86dc8a19
+babf5788-c95b-47db-a1e8-dac5bf67bfc0,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,tbsp olive oil,true,1,unit,058b437a-5271-424b-9ce6-4f0d86dc8a19
+85040c4e-838e-43c5-961b-30b7a4685c36,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"onions, finely chopped",true,2,unit,058b437a-5271-424b-9ce6-4f0d86dc8a19
+11aa0930-4f02-4523-9821-1be071a4e9a9,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"garlic cloves, sliced",true,2,unit,058b437a-5271-424b-9ce6-4f0d86dc8a19
+a951b0db-e6db-4696-a655-c99fe1d56c93,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"carrot, roughly chopped",true,1,unit,058b437a-5271-424b-9ce6-4f0d86dc8a19
+ed1a296c-b16e-4c79-b7ad-48646057d80e,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,tbsp tomato purée,true,2,unit,058b437a-5271-424b-9ce6-4f0d86dc8a19
+5227c85d-703e-41aa-9276-ceeb1cf5aa63,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,white wine,true,200,ml,058b437a-5271-424b-9ce6-4f0d86dc8a19
+00622ebe-79ff-4838-aa73-ca9af7a946b9,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,chopped tomatoes,true,1200,g,058b437a-5271-424b-9ce6-4f0d86dc8a19
+820e1a37-589c-4c72-b33d-9decf3f3db78,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"bunch of basil, leaves picked",true,1,unit,058b437a-5271-424b-9ce6-4f0d86dc8a19
+8f4c3919-2e9c-4af0-b58d-8f62e12a9b88,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,butter,true,85,g,058b437a-5271-424b-9ce6-4f0d86dc8a19
+33da017b-5d37-439f-ba4c-62c87c077343,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,plain flour,true,85,g,058b437a-5271-424b-9ce6-4f0d86dc8a19
+feae5c99-a1c9-4581-b403-b95585f09bf9,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,milk,true,750,ml,058b437a-5271-424b-9ce6-4f0d86dc8a19
+f6e23a83-54e4-4285-b317-b430ba691385,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"cremini mushrooms, roughly chopped",true,1.5,pounds,700d01de-8fb0-46d2-abdb-6fea0eb81693
+5a3416ba-171f-40ac-807c-4858e31ed749,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"shiitake mushrooms, roughly chopped",true,0.5,pound,700d01de-8fb0-46d2-abdb-6fea0eb81693
+622364c5-86b1-4b24-ae7a-9b980c28ca6e,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,teaspoon kosher salt,true,0.25,unit,700d01de-8fb0-46d2-abdb-6fea0eb81693
+1d1785ab-19c6-4134-808c-418e4fce236d,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,generous cup chopped onions,true,1,cup,700d01de-8fb0-46d2-abdb-6fea0eb81693
+830611e5-47a0-4303-86be-ebebf3fa5037,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"extra virgin olive oil, plus more for oiling the noodles",true,0.25,cup,700d01de-8fb0-46d2-abdb-6fea0eb81693
+c1a89cac-5a91-4b91-b18e-826f3f013c20,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"cloves garlic, chopped (about 4 teaspoons)",true,4,unit,700d01de-8fb0-46d2-abdb-6fea0eb81693
+4b557785-689f-4bb2-a7dc-a29059ae57e9,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,tomato paste,true,6,ounce,700d01de-8fb0-46d2-abdb-6fea0eb81693
+8f97806e-f092-489a-993d-25266d1c343a,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"prepared tomato sauce, divided",true,2,cups,700d01de-8fb0-46d2-abdb-6fea0eb81693
+42f3ab76-be75-47ec-9677-ca13c16537f5,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,crushed tomatoes,true,28,ounce,700d01de-8fb0-46d2-abdb-6fea0eb81693
+1c3b215b-dacd-4296-806a-765da4d1b39a,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,water,true,1,cup,700d01de-8fb0-46d2-abdb-6fea0eb81693
+b0a0fa8d-3d7a-433f-9707-d0da2f4492ef,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,tablespoon dried thyme,true,1,unit,700d01de-8fb0-46d2-abdb-6fea0eb81693
+579c04e6-8d9e-4337-b120-ea54ef843f62,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,teaspoon red pepper flakes,true,0.5,unit,700d01de-8fb0-46d2-abdb-6fea0eb81693
+1d15895a-9d88-4b52-90e2-22c88f85e370,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,tablespoon sugar,true,1,unit,700d01de-8fb0-46d2-abdb-6fea0eb81693
+61d6c965-4cf6-4653-97f8-980b1130f871,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,"frozen chopped spinach, thawed and squeezed in clean towel for excess moisture",true,10,ounce,700d01de-8fb0-46d2-abdb-6fea0eb81693
+549c8d0a-5080-48d4-9591-252af0033aeb,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,lasagna noodles (16 to 20 noodles),true,1,pound,700d01de-8fb0-46d2-abdb-6fea0eb81693
+b414b925-723a-488d-a590-9f4699fcfdaa,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,ricotta cheese,true,16,ounce,700d01de-8fb0-46d2-abdb-6fea0eb81693
+636f8895-6791-42ab-a342-b95555e81270,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,chopped fresh basil,true,0.25,cup,700d01de-8fb0-46d2-abdb-6fea0eb81693
+562b85b1-d726-4626-b9f0-afc89382fd30,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,shredded pecorino or Parmesan cheese (about 1 cup),true,0.25,pound,700d01de-8fb0-46d2-abdb-6fea0eb81693
+cac841ee-43f0-469a-8100-e340d23b56a7,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,shredded mozzarella cheese (about 4 cups),true,1,pound,700d01de-8fb0-46d2-abdb-6fea0eb81693
+039ebf14-3f47-41c7-8f1c-acbe49c716c2,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,small red or white potatoes,true,90,g,d24b353b-e47b-45c7-b916-71eebe51ab02
+c2c5864b-d601-49d6-8542-3f45f1895933,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,good olive oil,true,60,ml,d24b353b-e47b-45c7-b916-71eebe51ab02
+cd25d6cd-ba16-469f-97a5-af64a474ef89,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,tsp salt,true,1.5,unit,d24b353b-e47b-45c7-b916-71eebe51ab02
+43632f78-3ac0-4265-9fe0-08fdb9feeba3,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,tsp freshly ground black pepper,true,1,unit,d24b353b-e47b-45c7-b916-71eebe51ab02
+3480c381-9c71-4a99-8597-9b49b3b0dbb0,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,tbsp crushed garlic (6 cloves),true,2,unit,d24b353b-e47b-45c7-b916-71eebe51ab02
+cc6af834-10c7-453a-81df-cb4f21be586b,(select CURRENT_TIMESTAMP),(select CURRENT_TIMESTAMP),0,tbsp finely-chopped fresh parsley,true,2,unit,d24b353b-e47b-45c7-b916-71eebe51ab02

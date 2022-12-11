@@ -1,0 +1,485 @@
+openapi: 3.0.1
+info:
+  title: Recipe
+  description: Recipe API
+  version: 1.0.0
+  contact:
+    name: "Francisco Nunes Navarro"
+    url: "https://www.linkedin.com/in/francisconunesnavarro/"
+    email: "metis@afkl.onmicrosoft.com"
+servers:
+  - url: http://localhost:8080/api
+    description: Localhost server
+paths:
+  /recipes:
+    get:
+      operationId: listRecipes
+      summary: List all Recipes
+      tags:
+        - recipes
+      parameters:
+        - in: query
+          name: isExcludeIngredient
+          schema:
+            type: string
+            example: true
+        - in: query
+          name: mealType
+          schema:
+            type: string
+            example: VEGETARIAN
+            enum:
+              - FISH
+              - MEAT
+              - OTHER
+              - VEGAN
+              - VEGETARIAN
+        - in: query
+          name: numberOfServings
+          schema:
+            type: integer
+            example: 6
+        - in: query
+          name: searchIngredientName
+          schema:
+            type: string
+            example: garlic
+        - in: query
+          name: searchInstructions
+          schema:
+            type: string
+            example: oven
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RecipeResponse'
+    post:
+      operationId: createRecipe
+      summary: Create a new Recipe
+      tags:
+        - recipes
+      requestBody:
+        description: Info about the new Recipe
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateRecipeRequest'
+        required: true
+      responses:
+        201:
+          description: New Recipe was created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecipeResponse'
+  /recipes/{recipeId}:
+    put:
+      operationId: updateRecipe
+      summary: Update Recipe
+      tags:
+        - recipes
+      parameters:
+        - name: recipeId
+          required: true
+          example: '7c743fa3-1a5c-4ab5-a281-d3c3724d8dce'
+          in: path
+          description: Recipe Id
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        description: Recipe info to be updated
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateRecipeRequest'
+        required: true
+      responses:
+        200:
+          description: Recipe was updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecipeResponse'
+        404:
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundException'
+    delete:
+      operationId: deleteRecipe
+      summary: Delete a Recipe
+      tags:
+        - recipes
+      parameters:
+        - name: recipeId
+          required: true
+          example: '7c743fa3-1a5c-4ab5-a281-d3c3724d8dce'
+          in: path
+          description: Recipe Id
+          schema:
+            type: string
+            format: uuid
+      responses:
+        204:
+          description: Recipe was deleted
+        404:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundException'
+  /recipes/{recipeId}/ingredients:
+    get:
+      operationId: listIngredientsByRecipeId
+      summary: List all Ingredients by Recipe Id
+      tags:
+        - recipes
+      responses:
+        200:
+          description: Response OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IngredientResponse'
+    post:
+      operationId: createIngredient
+      summary: Create a new Ingredient
+      tags:
+        - recipes
+      requestBody:
+        description: Info about the new Ingredient
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateIngredientRequest'
+        required: true
+      responses:
+        201:
+          description: New Ingredient was created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IngredientResponse'
+  /ingredients:
+    get:
+      operationId: listIngredients
+      summary: List all Ingredients
+      tags:
+        - ingredients
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IngredientResponse'
+  /ingredients/{ingredientId}:
+    put:
+      operationId: updateIngredient
+      summary: Update Ingredient
+      tags:
+        - ingredients
+      parameters:
+        - name: recipeId
+          required: true
+          example: '7c743fa3-1a5c-4ab5-a281-d3c3724d8dce'
+          in: path
+          description: Recipe Id
+          schema:
+            type: string
+            format: uuid
+        - name: ingredientId
+          required: true
+          example: '7c743fa3-1a5c-4ab5-a281-d3c3724d8dce'
+          in: path
+          description: Ingredient Id
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        description: Ingredient info to be updated
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateIngredientRequest'
+        required: true
+      responses:
+        200:
+          description: Ingredient was updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IngredientResponse'
+        404:
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundException'
+    delete:
+      operationId: deleteRecipe
+      summary: Delete a Ingredient
+      tags:
+        - ingredients
+      parameters:
+        - name: recipeId
+          required: true
+          example: '7c743fa3-1a5c-4ab5-a281-d3c3724d8dce'
+          in: path
+          description: Id of the Recipe
+          schema:
+            type: string
+            format: uuid
+        - name: ingredientId
+          required: true
+          example: '7c743fa3-1a5c-4ab5-a281-d3c3724d8dce'
+          in: path
+          description: Ingredient Id
+          schema:
+            type: string
+            format: uuid
+      responses:
+        204:
+          description: Ingredient was deleted
+        404:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundException'
+
+components:
+  schemas:
+    CreateIngredientRequest:
+      type: object
+      description: Information to create a ingredient
+      properties:
+        name:
+          type: string
+          minLength: 1
+          example: spaghetti
+        isActive:
+          type: boolean
+          minLength: 1
+          example: true
+        quantity:
+          type: number
+          example: 2.5
+        unitMeasurement:
+          type: string
+          minLength: 1
+          example: g
+      required:
+        - name
+        - isActive
+        - quantity
+        - unitMeasurement
+
+    CreateRecipeRequest:
+      type: object
+      description: Information to create a recipe
+      properties:
+        cookTime:
+          type: string
+          example: 15 min
+        ingredients:
+          type: array
+          items:
+            $ref: '#/components/schemas/CreateIngredientRequest'
+        instructions:
+          type: string
+          example: Step 1) ... step 2)
+        isActive:
+          type: boolean
+          example: true
+        mealType:
+          type: string
+          example: VEGETARIAN
+          enum:
+            - FISH
+            - MEAT
+            - OTHER
+            - VEGAN
+            - VEGETARIAN
+        name:
+          type: string
+          minLength: 1
+          example: 'carbonara'
+        numberOfServings:
+          type: integer
+          example: 4
+        prepTime:
+          type: string
+          example: 40 min
+      required:
+        - cookTime
+        - ingredients
+        - instructions
+        - isActive
+        - mealType
+        - name
+        - numberOfServings
+        - prepTime
+
+    IngredientResponse:
+      type: object
+      description: Information about ingredient
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: '7c743fa3-1a5c-4ab5-a281-d3c3724d8dce'
+        name:
+          type: string
+          minLength: 1
+          example: spaghetti
+        isActive:
+          type: boolean
+          minLength: 1
+          example: true
+        quantity:
+          type: number
+          example: 2.5
+        unitMeasurement:
+          type: string
+          minLength: 1
+          example: g
+
+    RecipeResponse:
+      type: object
+      description: Information about recipe
+      properties:
+        cookTime:
+          type: string
+          example: 15 min
+        id:
+          type: string
+          format: uuid
+          example: '7c743fa3-1a5c-4ab5-a281-d3c3724d8dce'
+        ingredients:
+          type: array
+          items:
+            $ref: '#/components/schemas/IngredientResponse'
+        instructions:
+          type: string
+          example: Step 1) ... step 2)
+        isActive:
+          type: boolean
+          example: true
+        mealType:
+          type: string
+          example: VEGETARIAN
+          enum:
+            - FISH
+            - MEAT
+            - OTHER
+            - VEGAN
+            - VEGETARIAN
+        name:
+          type: string
+          minLength: 1
+          example: 'carbonara'
+        numberOfServings:
+          type: integer
+          example: 4
+        prepTime:
+          type: string
+          example: 40 min
+
+    NotFoundException:
+      type: object
+      properties:
+        code:
+          type: string
+          example: 404
+        message:
+          type: string
+          example: Not Found
+
+    UpdateIngredientRequest:
+      type: object
+      description: Information to create a ingredient
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: '7c743fa3-1a5c-4ab5-a281-d3c3724d8dce'
+        name:
+          type: string
+          minLength: 1
+          example: spaghetti
+        isActive:
+          type: boolean
+          minLength: 1
+          example: true
+        quantity:
+          type: number
+          example: 2.5
+        unitMeasurement:
+          type: string
+          minLength: 1
+          example: g
+      required:
+        - id
+        - name
+        - isActive
+        - quantity
+        - unitMeasurement
+
+    UpdateRecipeRequest:
+      type: object
+      description: Information to update a recipe
+      properties:
+        cookTime:
+          type: string
+          example: 15 min
+        ingredients:
+          type: array
+          items:
+            $ref: '#/components/schemas/CreateIngredientRequest'
+        instructions:
+          type: string
+          example: Step 1) ... step 2)
+        isActive:
+          type: boolean
+          example: true
+        mealType:
+          type: string
+          example: VEGETARIAN
+          enum:
+            - FISH
+            - MEAT
+            - OTHER
+            - VEGAN
+            - VEGETARIAN
+        name:
+          type: string
+          minLength: 1
+          example: 'carbonara'
+        numberOfServings:
+          type: integer
+          example: 4
+        prepTime:
+          type: string
+          example: 40 min
+      required:
+        - cookTime
+        - ingredients
+        - instructions
+        - isActive
+        - mealType
+        - name
+        - numberOfServings
+        - prepTime
+

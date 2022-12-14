@@ -46,9 +46,9 @@ mvn clean package
 
 To run the app locally using docker-compose use `docker-compose.yml` to launch the application.
 
-You can launch it using IDEA, in this case you can just open the file and use ide controls.
+You can launch it using IDE, in this case you can just open the file and use ide controls.
 
-If you don't use IDEA you can launch it using the terminal:
+If you don't use IDE you can launch it using the terminal:
 
 ```shell
 docker compose up
